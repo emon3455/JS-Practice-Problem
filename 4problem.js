@@ -3,10 +3,8 @@ function nameConversion(name1, name2){
     if(name1.length > name2.length){
 
         let names = [];
-        let x = 0;
         for(let i=name1.length-1; i>= 0; i--){
-            names[x]= name1[i];
-            x++;
+            names.push(name1[i]);
         }
 
         let name = names.join("");
@@ -19,16 +17,29 @@ function nameConversion(name1, name2){
         let names = [];
         let x = 0;
         for(let i=name2.length-1; i>= 0; i--){
-            names[x]= name2[i];
-            x++;
+            names.push(name2[i]);
         }
 
         let name = names.join("");
         return name;
-        
+
     }
 
 }
+
+// optional/pro way:
+
+/* function nameConversion(name1, name2){
+
+    if(name1.length > name2.length){
+        return (name1.split("").reverse().join(""));
+    }
+    
+    else{
+        return (name2.split("").reverse().join(""));
+    }
+
+} */
 
 let name1 = "Emon";
 let name2 = "Farjana";
